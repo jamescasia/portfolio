@@ -33,7 +33,7 @@ body {
 	line-height: 1.5;
 	width: 100vw;
 	overflow-x: hidden;
-}
+} 
 
 h1,
 h2,
@@ -110,11 +110,10 @@ h3 {
 
 @media (max-width: 500px) {
 	.showcase-content {
-		/* background: #999; */
 		width: 100%;
 	}
 
-	.showcase-text {
+	.showcase-text { 
 		font-size: 2rem;
 	}
 
@@ -127,4 +126,12 @@ h3 {
 	.portfolio .col-md-7 {
 		margin-left: 1.5rem;
 	}
+}
+ @media (min-width: 1200px){
+	.home-showcase{ 
+		background-image:url('../assets/img//photo.png'); 
+		background-blend-mode: multiply;
+		background-repeat: no-repeat;
+		background-position: right center; 
+	} 
 }
