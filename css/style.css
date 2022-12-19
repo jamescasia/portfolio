@@ -1,20 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,400&display=swap');
 
 @font-face {
-	font-family: 'Apercu Light';
-	src: url('../assets/font/Apercu\ Pro\ Light.otf');
+	font-family: 'Manrope Light';
+	src: url('../assets/font/Manrope/static/Manrope-Light.ttf');
 	font-style: normal;
 	font-weight: normal;
 }
 @font-face {
-	font-family: 'Apercu Bold';
-	src: url('../assets/font/Apercu\ Bold.otf');
-	font-style: normal;
-	font-weight: normal;
+	font-family: 'Manrope Bold';
+	src: url('../assets/font/Manrope/static/Manrope-Bold.ttf');
+	font-style: bold;
+	font-weight: bold;
 }
 @font-face {
-	font-family: 'Apercu';
-	src: url('../assets/font/Apercu\ Pro\ Regular.otf');
+	font-family: 'Manrope';
+	src: url('../assets/font/Manrope/static/Manrope-Medium.ttf');
 	font-style: normal;
 	font-weight: normal;
 }
@@ -43,7 +43,7 @@ h3 {
 
 /* utilities */
 .text-email {
-	text-decoration: underline;
+	text-decoration: underline; 
 }
 .primary-text {
 	color: var(--primary-color);
@@ -64,20 +64,20 @@ h3 {
 
 /* sections */
 .showcase-content {
-	/* background: #999; */
+	position: relative;
 	width: 70%;
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	font-family: 'Apercu Light', sans-serif;
+	font-family: 'Manrope Light', sans-serif;
 }
 .showcase-name {
-	font-family: 'Apercu Bold', sans-serif;
+	font-family: 'Manrope Bold', sans-serif;
 }
 
 .section-title {
-	font-family: 'Apercu', sans-serif;
+	font-family: 'Manrope', sans-serif;
 	font-weight: bolder !important;
 	font-style: normal;
 	letter-spacing: 2px;
@@ -89,7 +89,7 @@ h3 {
 
 .skill-category,
 .project-title {
-	font-family: 'Apercu', sans-serif;
+	font-family: 'Manrope', sans-serif;
 	font-weight: bolder !important;
 	font-style: normal;
 	margin-top: 0.25rem;
@@ -114,11 +114,11 @@ h3 {
 	color: #4f4f4f
 }
 .hireme-text span {
-	color:black;
+	color:black; 
 } 
 .service-text{
 
-	font-family: 'Apercu', sans-serif;
+	font-family: 'Manrope', sans-serif;
 	font-weight:500;
 }
 @media (max-width: 500px) {
@@ -140,13 +140,72 @@ h3 {
 		margin-left: 1.5rem;
 	}
 }
+
+@keyframes float {
+	0% {
+	  transform: translateY(0);
+	}
+	50% {
+	  transform: translateY(-20px);
+	}
+	100% {
+	  transform: translateY(0);
+	}
+  }
+ 
+/* .stack-item {
+	position:absolute;
+	z-index: 3;
+} */
+.z-1 {
+	z-index: 1;
+}
+.floating {  
+	animation: float 2s ease-in-out infinite;
+}
+@keyframes wave {
+	0% {
+	  transform: rotate(0deg);
+	}
+	50% {
+	  transform: rotate(-15deg);
+	}
+	100% {
+	  transform: rotate(0deg);
+	}
+  }
+  
+.hand { 
+	font-size: 2rem;
+	animation: wave 2s ease-in-out infinite;
+}
+  
+.bulb-showcase {     
+	animation: float 4s ease-in-out infinite 1s;
+	position: absolute;
+	left: 50%;
+  	top: 30%;
+  	transform: translate(-50%, -50%); 
+	z-index: 0;
+}
+.laptop-showcase {  
+
+	height: 463px; 
+	width: 664px;
+	position: absolute;
+	left: 50%;
+  	top: 40%;
+  	transform: translate(-50%, -50%);  
+	z-index: 0;
+
+	animation: float 3s ease-in-out infinite;
+}
  @media (min-width: 1200px){
-	.home-showcase{ 
-		/* background-image:url('../assets/img//photo.png');  */
-		background-blend-mode: multiply;
-		background-repeat: no-repeat;
-		background-position: right center; 
-	} 
+ 
+	.visible {
+		display: block;
+	  }
+	 
 }
 
 *, *:before, *:after {
@@ -187,6 +246,7 @@ h3 {
   }
   
   .footer__logo { 
+	
 	font-weight: 400;
 	text-transform: lowercase;
 	font-size: 1.5rem;
@@ -303,4 +363,33 @@ h3 {
 .nav-link {
 	color:#f4f4f4; 
 }
- 
+@keyframes pulse {
+	0% {
+	  transform: scale(1);
+	}
+	50% {
+	  transform: scale(1.1);
+	}
+	100% {
+	  transform: scale(1);
+	}
+  }
+  
+  .cta-button {
+	animation: pulse 1.2s ease-in-out infinite;
+  }
+  
+  .reveal-element {
+	opacity: 0; 
+	 /* visibility: hidden;  */
+	transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+  
+  .reveal-element:hover {
+	opacity: 1;
+	visibility: visible;
+  }
+  .clipped-image {
+	clip-path: inset(0 0 0 round 35px 35px);
+  }
+  
