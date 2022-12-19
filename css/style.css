@@ -142,7 +142,7 @@ h3 {
 }
  @media (min-width: 1200px){
 	.home-showcase{ 
-		background-image:url('../assets/img//photo.png'); 
+		/* background-image:url('../assets/img//photo.png');  */
 		background-blend-mode: multiply;
 		background-repeat: no-repeat;
 		background-position: right center; 
