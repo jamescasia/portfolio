@@ -221,7 +221,7 @@ h3 {
 	margin: 0;
 	display: grid;
 	grid-template-rows: auto 1fr auto;
-	font-size: 1.1rem;
+	font-size: 1.03rem;
 	background-color: #f4f4f4;
 	align-items: start;
 	min-height: 100vh;
